@@ -1,0 +1,15 @@
+<%- include('partials/header') %>
+    <%# Wichtig für das Formular ist enctype="multipart/form-data" %>
+        <% uploadInformations.forEach(item=> { %>
+            <figure>
+                <img src=<%=item.filename %> alt="">
+                <figcaption>
+                    <p>Ordinalname: <%=item.originalName %>
+                    </p>
+                    <p>Userinput: <%=item.input %>
+                    </p>
+                </figcaption>
+            </figure>
+
+            <% }) %>
+                <%- include('partials/footer') %>
